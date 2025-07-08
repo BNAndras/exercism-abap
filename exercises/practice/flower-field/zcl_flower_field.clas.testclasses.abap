@@ -17,9 +17,9 @@ CLASS ltc_test DEFINITION FINAL FOR TESTING
     METHODS flower_surrounded_by_spaces     FOR TESTING RAISING cx_static_check.
     METHODS space_surrounded_by_flowers     FOR TESTING RAISING cx_static_check.
     METHODS horizontal_line                 FOR TESTING RAISING cx_static_check.
-    METHODS horizontal_line_flowers_at_ends FOR TESTING RAISING cx_static_check.
+    METHODS horizontal_line_flower_at_ends FOR TESTING RAISING cx_static_check.
     METHODS vertical_line                   FOR TESTING RAISING cx_static_check.
-    METHODS vertical_line_flowers_at_ends   FOR TESTING RAISING cx_static_check.
+    METHODS vertical_line_flower_at_ends   FOR TESTING RAISING cx_static_check.
     METHODS cross                           FOR TESTING RAISING cx_static_check.
     METHODS large_garden                    FOR TESTING RAISING cx_static_check.
 
@@ -106,7 +106,7 @@ CLASS ltc_test IMPLEMENTATION.
   ENDMETHOD.
 
 
-  METHOD horizontal_line_flowers_at_ends.
+  METHOD horizontal_line_flower_at_ends.
     assert_that(
       input  = VALUE #( ( `*   *` ) )
       output = VALUE #( ( `*1 1*` ) ) ).
@@ -130,7 +130,7 @@ CLASS ltc_test IMPLEMENTATION.
   ENDMETHOD.
 
 
-  METHOD vertical_line_flowers_at_ends.
+  METHOD vertical_line_flower_at_ends.
     assert_that(
       input  = VALUE #(
         ( `*` )
